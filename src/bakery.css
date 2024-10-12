@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.content {
+    padding: 20px;
+
+}
+
+h1 {
+    color: black;
+    font-weight: bold;
+    letter-spacing: -2.5px;
+}
+
+p {
+    color: #343a40;
+    font-size: 1.2em;
+}
+img{
+    padding-top: 40px ;
+}
+.img-fluid {
+    border-radius: 10px !important; 
+    overflow: hidden; /* Ensures that the content inside the rounded corners stays clipped */
+}
+

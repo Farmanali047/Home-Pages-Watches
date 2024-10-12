@@ -1,0 +1,116 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header styles */
+.header {
+    background-color:whitesmoke;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100px;
+}
+
+.navbar-brand {
+    color: #e24e2f;
+    font-size: 28px; 
+    font-weight: bold;
+}
+
+.navbar-toggler {
+    font-size: 24px;
+    background-color: #e24e2f;
+    color: white;
+}
+.bi-cart-plus {
+    font-size: 1,5rem; /* Adjust the size */
+    background-color: #e24e2f !important; /* Adjust the color */
+    margin-right: 15px; /* Add space between icon and other elements */
+}
+
+.bi-cart-plus:hover {
+    color: purple; /* Change color on hover */
+}
+
+
+.navbar-toggler:hover {
+    background-color: purple; /* Hover effect for toggler */
+}
+
+/* Navbar links */
+.nav-link {
+    text-decoration: none;
+    color: #e24e2f;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: purple; /* Hover color */
+    background-color: rgba(128, 0, 128, 0.1); /* Light purple background */
+}
+
+.nav-link:focus, .nav-link:active {
+    color: purple;
+    background-color: rgba(128, 0, 128, 0.1);
+    outline: none;
+}
+
+.btn-outline-light {
+    color: white;
+    background-color: #e24e2f;
+    border-color: #e24e2f;
+}
+
+.btn-outline-light:hover {
+    color: white;
+    background-color: purple; /* Hover color for the button */
+    border-color: purple;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-toggler {
+        display: block;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        display: none;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .cart-btn {
+        margin-top: 10px;
+    }
+    
+}

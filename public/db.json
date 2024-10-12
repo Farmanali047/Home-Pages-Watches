@@ -1,0 +1,69 @@
+{
+  "bakeryItems": [
+    {
+      "id": "1",
+      "name": "Chocolate Cake",
+      "description": "A delicious chocolate cake",
+      "price": 50.9,
+      "image": "/Images/cake1.jpg",
+      "category": "Cakes"
+    },
+    {
+      "id": "2",
+      "name": "Croissant",
+      "description": "Flaky butter croissant",
+      "price": 60.99,
+      "image": "/Images/cake2.jpeg",
+      "category": "Cakes"
+    },
+    {
+      "id": "a235",
+      "name": "Chocolate Cake",
+      "description": "A delicious chocolate cake",
+      "price": "2322",
+      "image": "/Images/cake3.jpeg",
+      "category": "Cakes"
+    },
+    {
+      "id": "0c8a",
+      "name": "Cookies",
+      "description": "A delicious cookies",
+      "price": "3",
+      "image": "/Images/coki1.jpeg",
+      "category": "Cookies"
+    },
+    {
+      "id": "62f9",
+      "name": "Cookies",
+      "description": "A delicious cookies",
+      "price": "50.90",
+      "image": "/Images/coki2 butter.jpeg",
+      "category": "Cookies"
+    },
+    {
+      "id": "f787",
+      "name": "Pastries",
+      "description": "A delicious pastrie",
+      "price": "22.99",
+      "image": "/Images/p3 frech.jpeg",
+      "category": "Pastries"
+    },
+    {
+      "id": "0bbf",
+      "name": "Pastries",
+      "description": "A delicious pastrie",
+      "price": "10.99",
+      "image": "/Images/p2.jpeg",
+      "category": "Pastries"
+    },
+    {
+      "id": "7170",
+      "name": "Bread",
+      "description": "Bread is delicious",
+      "price": "23.42",
+      "image": "/Images/d1.jpeg",
+      "category": "Bread"
+    }
+   
+  ]
+}

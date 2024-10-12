@@ -1,0 +1,33 @@
+body {
+    background-color:whitesmoke;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.login-form {
+    padding: 50px 0px;
+   color:black;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+/* Remove underline from SignUp link by default */
+a.signup-link {
+    text-decoration: none; /* Remove the underline */
+    color: #2C7865; /* Set your desired text color */
+}
+
+/* Add underline on hover */
+a.signup-link:hover {
+    text-decoration: underline; /* Show underline on hover */
+}
+

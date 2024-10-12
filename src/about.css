@@ -1,0 +1,68 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* Light background for better contrast */
+    line-height: 1.6; /* Improved readability */
+    color: #343a40; /* Main text color */
+}
+
+.container {
+    max-width: 1200px; /* Limit the max width for better layout */
+    margin: auto; /* Center the container */
+}
+
+h2 {
+    color: #6c757d; /* Section title color */
+    margin-top: 20px; /* Spacing above section titles */
+    font-size: 1.8em; /* Slightly larger font size */
+    border-bottom: 2px solid #6c757d; /* Underline for visual separation */
+    padding-bottom: 10px; /* Padding below the title */
+}
+
+.intro-text {
+    font-size: 1.1em; /* Introductory text font size */
+    margin-bottom: 20px; /* Spacing below the paragraph */
+}
+
+.mission-text {
+    font-size: 1.1em; /* Consistent font size for mission paragraph */
+    margin-bottom: 20px; /* Spacing below the paragraph */
+}
+
+/* Add padding between Mission and Values sections */
+.values-section {
+    margin-top: 30px; /* Add spacing between mission and values sections */
+}
+
+.img-fluid {
+    border-radius: 15px; /* Rounded corners for images */
+    overflow: hidden; /* Ensures that the content inside the rounded corners stays clipped */
+    transition: transform 0.3s; /* Smooth zoom effect on hover */
+}
+
+.img-fluid:hover {
+    transform: scale(1.05); /* Slightly enlarge image on hover */
+}
+
+.values-list {
+    padding-left: 20px; /* Indent the list */
+    font-size: 1.1em; /* Font size for list items */
+    list-style-type: disc; /* Bullets for the list */
+}
+
+.values-list li {
+    margin-bottom: 10px; /* Spacing between list items */
+    transition: color 0.3s; /* Transition effect on hover */
+}
+
+.values-list li:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+/* Adjusting padding and margin for overall better spacing */
+.mt-5 {
+    margin-top: 3rem !important;
+}
+
+.pt-5 {
+    padding-top: 3rem !important;
+}
