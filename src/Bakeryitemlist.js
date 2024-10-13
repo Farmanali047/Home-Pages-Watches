@@ -1,4 +1,3 @@
-// BakeryItemsList.js
 import React, { useState } from 'react';
 import './BakeryItemsList.css';
 
@@ -6,10 +5,8 @@ const BakeryItemsList = ({ items, onAddToCart }) => {
     const [selectedCategory, setSelectedCategory] = useState(''); // Category filter state
     const [searchQuery, setSearchQuery] = useState(''); // Search query state
 
-    // Extract unique categories from the items list
     const categories = [...new Set(items.map(item => item.category))];
 
-    // Filter items based on the selected category and search query
     const filteredItems = items.filter(item => {
         const matchesCategory = selectedCategory ? item.category === selectedCategory : true;
         const matchesSearch = item.name.toLowerCase().includes(searchQuery.toLowerCase());
@@ -34,6 +31,17 @@ const BakeryItemsList = ({ items, onAddToCart }) => {
                         ))}
                     </select>
                 </div>
+                <div className="col-md-6 pt-2">
+                    <label className="form-label">Search</label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        placeholder="Search by product name..."
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                    />
+                </div>
+
 
                
             </div>

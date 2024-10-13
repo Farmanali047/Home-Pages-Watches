@@ -1,17 +1,17 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
+import axios from 'axios';
+import CartSummary from './CartSummary';
 
 const ParentComponent = () => {
-    console.log('ParentComponent Render', { cart, totalBill });
-    const [cart, setCart] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
-    const [confirmCancel, setConfirmCancel] = useState(null);
+    console.log('ParentComponent Render');
 
+    const [cart, setCart] = useState([]); 
+    // Fetch cart items on component mount
     useEffect(() => {
         const fetchCartItems = async () => {
             try {
                 const response = await axios.get('http://localhost:8000/cartItems');
-                setCart(response.data);
+                setCart(response.data); // Store fetched items in state
             } catch (err) {
                 setError('Failed to fetch cart items');
             } finally {
@@ -22,20 +22,12 @@ const ParentComponent = () => {
         fetchCartItems();
     }, []);
 
-    const totalBill = cart.reduce((total, item) => total + item.price, 0);
+    // Calculate total bill using useMemo to optimize re-renders
+    const totalBill = useMemo(() => {
+        return cart.reduce((total, item) => total + item.price, 0);
+    }, [cart]);
 
-    const handleCancel = useCallback((id) => {
-        setConfirmCancel(id);
-    }, []); // Empty dependency array ensures it remains the same
-
-    const confirmCancelOrder = () => {
-        const updatedCart = cart.filter(item => item.id !== confirmCancel);
-        setCart(updatedCart);
-        setConfirmCancel(null);
-    };
-
-    const cancelCancelOrder = () => {
-        setConfirmCancel(null);
+   
     };
 
     if (loading) return <div>Loading...</div>;
@@ -43,23 +35,13 @@ const ParentComponent = () => {
 
     return (
         <div>
-            <CartSummary 
-                key={cart.length} 
-                cart={cart} 
-                totalBill={totalBill} 
-                onCancel={handleCancel} 
-                confirmCancel={confirmCancel} 
-                onConfirmCancel={confirmCancelOrder}
-                onCancelCancel={cancelCancelOrder}
+            <CartSummary
+                cart={cart}
+                totalBill={totalBill}
+                
             />
-            {confirmCancel !== null && (
-                <div className="alert alert-warning mt-4">
-                    <p>Are you sure you want to cancel this order?</p>
-                    <button className="btn btn-danger" onClick={confirmCancelOrder}>Yes, Cancel</button>
-                    <button className="btn btn-secondary" onClick={cancelCancelOrder}>No, Keep it</button>
-                </div>
-            )}
         </div>
     );
 };
+
 export default ParentComponent;

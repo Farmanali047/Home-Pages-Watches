@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './herder.css';
 import './bootstrap-5.0.2-dist/css/bootstrap.min.css';
-import CartSummary from './Cartsummery';
 const Header = ({cart = []}) => {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -41,9 +40,11 @@ const Header = ({cart = []}) => {
                         <li className="nav-item">
                             <a className="nav-link" href="/contact"style={{color:"#e24e2f"}}>Contact us</a>
                         </li>
-                        <li>
 
-                        
+                        <li className="nav-item">
+                            <a className="nav-link" href="/viewall"style={{color:"#e24e2f"}}>view</a>
+                        </li>
+                        <li>
                         <Link className="btn btn-outline-light rounded-pill" style={{ height: '40px', width: '90px', background:"#e24e2f"}}  to="/cart">
                          Cart ({cart.length})
                     </Link>

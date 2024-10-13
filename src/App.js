@@ -10,7 +10,8 @@ import { BrowserRouter as Router, Route, Routes, useLocation, Link } from 'react
 import Register from './Register';
 import BakeryItemsList from './Bakeryitemlist';
 import AddBakeryItem from './AddBakeryItem';
-import CartSummary from './Cartsummery'; // Cart Summary Page
+import CartSummary from './Cartsummery'; 
+import View from './viewall';
 import axios from 'axios'; 
 
 const API_URL = 'http://localhost:8000/bakeryItems'; // JSON-server URL
@@ -96,6 +97,8 @@ function MainLayout({ items, onAddItem, onAddToCart, cart, totalBill }) {
                     <Route path="/about" element={<AboutPage />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/register" element={<Register />} />
+                    <Route path="/viewall" element={<View items={items} />} /> {/* Add this line */}
+
                 </Routes>
             </div>
         </>
