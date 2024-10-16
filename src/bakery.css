@@ -18,9 +18,11 @@ p {
     color: #343a40;
     font-size: 1.2em;
 }
+
 img{
-    padding-top: 40px ;
+ margin-top: 50px;
 }
+
 .img-fluid {
     border-radius: 10px !important; 
     overflow: hidden; /* Ensures that the content inside the rounded corners stays clipped */

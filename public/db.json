@@ -9,40 +9,100 @@
       "category": "Cakes"
     },
     {
-      "id": "2",
-      "name": "Croissant",
-      "description": "Flaky butter croissant",
-      "price": 60.99,
-      "image": "/Images/cake2.jpeg",
-      "category": "Cakes"
-    },
-    {
       "id": "0c8a",
       "name": " Pastries",
       "price": 40.67,
       "image": "/Images/d1.jpeg",
-      "description": "Flaky and Buttery"
+      "description": "Flaky and Buttery",
+      "category": "Pastries"
     },
     {
       "id": "f787",
       "name": "Pastries",
       "price": 22.99,
       "image": "/Images/p2.jpeg",
-      "description": "Decadent Layers"
+      "description": "Decadent Layers",
+      "category": "Pastries"
     },
     {
       "id": "0bbf",
       "name": "Pastries",
-      "price": 10.99,
+      "price": 12.99,
       "image": "/Images/pas1.jpeg",
-      "description": "Sweet Indulgence"
+      "description": "Sweet Indulgence",
+      "category": "Pastries"
     },
     {
       "id": "2d1f",
       "name": "Cookies",
       "price": 39.9,
       "image": "/Images/coki1.jpeg",
-      "description": "Warm and Comforting"
+      "description": "Warm and Comforting",
+      "category": "Cookies"
+    },
+    {
+      "id": "a7ef",
+      "name": "Choco Chunk",
+      "price": 29.99,
+      "image": "/Images/cori1.jpeg",
+      "description": "Rich, gooey.",
+      "category": "Cookies"
+    },
+    {
+      "id": "496d",
+      "name": "Sugar Sprinkle",
+      "price": 50.98,
+      "image": "/Images/mixcoki.jpeg",
+      "description": "Nutty, chewy, Sweet, buttery",
+      "category": "Cookies"
+    },
+    {
+      "id": "02fd",
+      "name": "Croissant Twist",
+      "description": "Flaky, buttery",
+      "price": "40.00",
+      "image": "/Images/p2.jpeg",
+      "category": "Pastries"
+    },
+    {
+      "id": "15c2",
+      "name": "Apple Turnover",
+      "description": "Sweet, crisp",
+      "price": "44.97",
+      "image": "/Images/pas1.jpeg",
+      "category": "Pastries"
+    },
+    {
+      "id": "7e6c",
+      "name": "Brioche Bun",
+      "description": "Soft, Buttery, Tangy, Crusty",
+      "price": "89.99",
+      "image": "/Images/b2.jpeg",
+      "category": "Bread"
+    },
+    {
+      "id": "4dec",
+      "name": "Brioche Bun",
+      "description": "Soft, Buttery, Herbed, Chewy",
+      "price": "100.00",
+      "image": "/Images/b1.jpeg",
+      "category": "Bread"
+    },
+    {
+      "id": "ade1",
+      "name": "Cheesecake Slice",
+      "description": "Creamy, Rich, Gooey",
+      "price": "70.00",
+      "image": "/Images/d1.jpeg",
+      "category": "Desserts"
+    },
+    {
+      "id": "66f5",
+      "name": "Tiramisu Delight",
+      "description": "Coffee-Flavored, Layered",
+      "price": "79.99",
+      "image": "/Images/d2.jpeg",
+      "category": "Desserts"
     }
   ]
 }

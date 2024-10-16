@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './cartSummary.css'; // Make sure to create this CSS file for custom styles
 
-const CartSummary = ({ cart, totalBill}) => {
+const CartSummary = ({ cart, totalBill }) => {
     console.log('Props:', { cart, totalBill });
 
     return (
@@ -11,38 +12,33 @@ const CartSummary = ({ cart, totalBill}) => {
                 <p>Your cart is empty.</p>
             ) : (
                 <>
-                    <table className="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th scope="col">Image</th>
-                                <th scope="col">Item Name</th>
-                                <th scope="col">Description</th>
-                                <th scope="col">Price</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {cart.map((item) => (
-                                <tr key={item.id}>
-                                    <td>
-                                        <img
-                                            src={item.image}
-                                            alt={item.name}
-                                            style={{ width: '100px', height: '100px' }}
-                                        />
-                                    </td>
-                                    <td>{item.name}</td>
-                                    <td>{item.description}</td>
-                                    <td>${Number(item.price).toFixed(2)}</td>
-                                    
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
+                    <div className="horizontal-card-container">
+                        {cart.map((item) => (
+                            <div className="horizontal-card" key={item.id}>
+                                <img
+                                    src={item.image}
+                                    alt={item.name}
+                                    className="horizontal-card-img"
+                                />
+                                <div className="horizontal-card-body">
+                                    <h5 className="horizontal-card-title">{item.name}</h5>
+                                    <p className="horizontal-card-text">{item.description}</p>
+                                    <p className="horizontal-card-price">
+                                        ${Number(item.price).toFixed(2)}
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                     <div className="mt-3">
                         <h4>Total Bill: ${Number(totalBill).toFixed(2)}</h4>
                     </div>
                     <div className="pb-5">
-                        <Link to="/Bakeryitemlist" className="btn btn-success mt-3" style={{ background: '#e24e2f' }}>
+                        <Link
+                            to="/Bakeryitemlist"
+                            className="btn btn-success mt-3"
+                            style={{ background: '#e24e2f' }}
+                        >
                             Continue Shopping
                         </Link>
                     </div>
@@ -51,7 +47,5 @@ const CartSummary = ({ cart, totalBill}) => {
         </div>
     );
 };
-
-
 
 export default CartSummary;

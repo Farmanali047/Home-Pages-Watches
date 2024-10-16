@@ -5,7 +5,7 @@ import CartSummary from './CartSummary';
 const ParentComponent = () => {
     console.log('ParentComponent Render');
 
-    const [cart, setCart] = useState([]); 
+    const [cart, setCart] = useState([]);
     // Fetch cart items on component mount
     useEffect(() => {
         const fetchCartItems = async () => {
@@ -27,21 +27,21 @@ const ParentComponent = () => {
         return cart.reduce((total, item) => total + item.price, 0);
     }, [cart]);
 
-   
-    };
 
-    if (loading) return <div>Loading...</div>;
-    if (error) return <div>{error}</div>;
-
-    return (
-        <div>
-            <CartSummary
-                cart={cart}
-                totalBill={totalBill}
-                
-            />
-        </div>
-    );
 };
+
+if (loading) return <div>Loading...</div>;
+if (error) return <div>{error}</div>;
+
+return (
+    <div>
+        <CartSummary
+            cart={cart}
+            totalBill={totalBill}
+
+        />
+    </div>
+);
+
 
 export default ParentComponent;

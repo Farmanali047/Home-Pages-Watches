@@ -1,17 +1,51 @@
-.bakery-items-container {
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
-.table {
-    margin-top: 20px;
+.card {
+    border: 2px solid #e24e2f;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    object-position: center; /* Center the image within the area */
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.card-actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .update-item-form {
-    margin-top: 20px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #f8f9fa;
+    margin-top: 30px;
+    border-top: 2px solid #ddd;
+    padding-top: 20px;
 }

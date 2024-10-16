@@ -1,0 +1,58 @@
+/* Styles for the horizontal card layout */
+.horizontal-card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.horizontal-card {
+    display: flex;
+    align-items: center;
+    border: 2px solid #e24e2f;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+    background-color: #fff;
+    width: 100%;
+    max-width: 800px; /* Optional: limit the maximum width */
+    margin: 0 auto; 
+    height: 150px;
+    
+}
+
+.horizontal-card:hover {
+    transform: scale(1.02);
+}
+
+.horizontal-card-img {
+    width: 150px;
+    height: 100px;
+    margin-bottom: 44px;
+    margin-left: 45px;
+    border-right: 1px solid ;
+}
+
+.horizontal-card-body {
+    padding: 16px;
+    flex: 1;
+}
+
+.horizontal-card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.horizontal-card-text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.horizontal-card-price {
+    font-size: 1.2rem;
+    color: #e24e2f;
+    font-weight: bold;
+}

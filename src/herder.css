@@ -1,116 +1,101 @@
-/* Basic reset */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Header styles */
+/* Header Styles */
 .header {
-    background-color:whitesmoke;
-    padding: 20px 0;
+    background-color: whitesmoke;
+
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-/* Navbar styles */
+/* Navbar Styles */
 .navbar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
+    justify-content: ce;
     max-width: 1200px;
     margin: 0 auto;
-    height: 100px;
+
+    align-items: center;
+
 }
 
+/* Navbar Brand */
 .navbar-brand {
-    color: #e24e2f;
-    font-size: 28px; 
+    font-size: 28px;
     font-weight: bold;
+    color: #e24e2f;
+    
 }
 
-.navbar-toggler {
-    font-size: 24px;
-    background-color: #e24e2f;
-    color: white;
-}
-.bi-cart-plus {
-    font-size: 1,5rem; /* Adjust the size */
-    background-color: #e24e2f !important; /* Adjust the color */
-    margin-right: 15px; /* Add space between icon and other elements */
-}
-
-.bi-cart-plus:hover {
-    color: purple; /* Change color on hover */
-}
-
-
-.navbar-toggler:hover {
-    background-color: purple; /* Hover effect for toggler */
-}
-
-/* Navbar links */
+/* Navbar Links */
 .nav-link {
-    text-decoration: none;
     color: #e24e2f;
     font-size: 16px;
     font-weight: 500;
     padding: 8px 16px;
-    border-radius: 4px;
+    text-decoration: none;
     transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 4px;
 }
 
 .nav-link:hover {
-    color: purple; /* Hover color */
-    background-color: rgba(128, 0, 128, 0.1); /* Light purple background */
+    color: white !important;
+    background-color:'#e24e2f' !important;
+    background: #e24e2f;
 }
 
-.nav-link:focus, .nav-link:active {
-    color: purple;
-    background-color: rgba(128, 0, 128, 0.1);
-    outline: none;
+.nav-item:hover{
+    color: white !important;
+    background-color:'#e24e2f' !important;
 }
 
+/* Cart Icon */
+.bi-cart {
+    font-size: 1.5rem;
+}
+
+.bi-cart:hover {
+    color: #eb3a17;
+}
+
+/* Login Button */
 .btn-outline-light {
     color: white;
     background-color: #e24e2f;
     border-color: #e24e2f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn-outline-light:hover {
-    color: white;
-    background-color: purple; /* Hover color for the button */
-    border-color: purple;
+    background-color: 'white';
+    color: '#e24e2f';
+    border-color: white;
 }
 
-/* Responsive design for mobile */
+/* Responsive Design */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        gap: 10px;
     }
 
     .navbar-toggler {
-        display: block;
-        cursor: pointer;
         margin-bottom: 10px;
     }
+    /* Custom styling for the navbar toggler icon */
 
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-        display: none;
-        width: 100%;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .cart-btn {
-        margin-top: 10px;
-    }
-    
 }

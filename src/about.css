@@ -30,7 +30,7 @@ h2 {
 
 /* Add padding between Mission and Values sections */
 .values-section {
-    margin-top: 30px; /* Add spacing between mission and values sections */
+    margin-top: 1px; /* Add spacing between mission and values sections */
 }
 
 .img-fluid {
@@ -44,9 +44,10 @@ h2 {
 }
 
 .values-list {
-    padding-left: 20px; /* Indent the list */
     font-size: 1.1em; /* Font size for list items */
     list-style-type: disc; /* Bullets for the list */
+    margin-left: 135px;
+    margin-top: 15px;
 }
 
 .values-list li {

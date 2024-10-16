@@ -5,9 +5,11 @@ const BakeryPage = () => {
     return (
         <div className="container my-5">
             <div className="row">
-                <div className="col-md-6 d-flex align-items-center">
+                <div className="col-md-6 d-flex align-items-center text-justify">
                     <div className="content ">
-                        <h1>Welcome to Cybake</h1>
+                        <h1 className="heading-style"
+
+                        >WELCOME TO CYBAKE</h1>
                         <p>
                             Here's a short, enhanced version of the text for Cybake, incorporating information about bakery items:
 
@@ -19,7 +21,7 @@ const BakeryPage = () => {
                     </div>
                 </div>
                 <div className="col-md-6">
-                    <img src={Image} alt="Bakery Image" className="img-fluid" />
+                    <img src={Image} alt="Bakery Image" className="img-fluid rounded"/>
                 </div>
             </div>
         </div>

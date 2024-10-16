@@ -17,7 +17,7 @@ const BakeryItemsList = ({ items, onAddToCart }) => {
         <div className="container mt-4">
             <div className="row mb-4">
                 <div className="col-md-6">
-                    <label className="form-label">Filter by Category</label>
+                    <label className="form-label fw-bold">Filter by Category</label>
                     <select
                         className="form-select"
                         value={selectedCategory}
@@ -32,7 +32,7 @@ const BakeryItemsList = ({ items, onAddToCart }) => {
                     </select>
                 </div>
                 <div className="col-md-6 pt-2">
-                    <label className="form-label">Search</label>
+                    <label className="form-label fw-bold">Search</label>
                     <input
                         type="text"
                         className="form-control"
