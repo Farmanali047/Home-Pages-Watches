@@ -1,23 +1,598 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/*Font Family*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 
+/* Header.css */
 
-body {
-  margin: 0;
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
+/* Header.css */
 
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body{
+  overflow-x: hidden;
 }
 
-.heading-style{
-  font-weight:800;
+.web-title {
+  font-family: 'Newsreader', serif;
+  margin-left: 100px;
+  font-size: 23px;
+}
+
+
+.Header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Transparent header when at the top */
+/* .transparent-header {
+  background-color: rgba(0, 0, 0, 0.7); 
+} */
+
+/* Solid header when scrolled down */
+/* .solid-header {
+  background-color: rgb(0, 0, 0); 
+  display: none;
+} */
+/* 
+.nav-header{
+  background-color: rgba(197, 195, 195, 0.7); 
+} */
+
+.Header .navbar-divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 0;
+}
+
+
+
+
+.Header .nav1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  /* background-color: rgba(45, 85, 65, 0.7); 70% opacity for nav1 and nav2 */
+  /* Match with image's color */
+}
+.Header .nav2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: #ccc solid 1px;
+  padding: 12px;
+  background: linear-gradient(to bottom, rgba(59, 130, 246, 0.7), rgba(23, 62, 172, 0.7)); /* Gradient with 70% opacity */
+  /* Match with image's color */
+}
+
+.Header .nav1 .menu-icon {
+  display: none;
+  font-size: 24px;
+  color: #ccc;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.Header .nav1-left .icon,
+.nav1-right .icon {
+  color: #ccc;
+  margin: 0 5px;
+}
+
+.Header .nav2-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+}
+
+.Header .nav2-links li a {
+  color:#c4c4c4;
+  text-decoration: none;
+  font-size: 11px;
+  font-family: 'Newsreader',sans-serif;
+}
+
+
+/* Responsive styles */
+@media (max-width: 786px) {
+
+  /* Hide Nav2 by default on smaller screens */
+  .Header .nav2 {
+    display: none;
+  }
+
+  .web-title {
+    font-family: 'Newsreader', serif;
+    margin-left: 100px;
+    font-size: 16px;
+  }
+
+  /* Show the menu icon */
+  .Header .nav1 .menu-icon {
+    display: inline;
+  }
+
+  .Header .nav1 .location-icon {
+    display: none;
+  }
+
+  /* Show Nav2 when toggled */
+  .Header .nav1 .nav2 {
+    display: flex;
+    flex-direction: column;
+    background-color: #004d4d;
+    /* Background color to match nav bar */
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    /* Adjust based on height of Nav1 */
+    left: 0;
+    padding: 10px 0;
+  }
+
+  /* Style Nav2 links in column layout */
+  .Header .nav2-links {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+
+
+/* Nav1.css */
+
+.nav1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: #2d5541; */
+  /* Dark green background color */
+  padding: 10px 20px;
+  color: #ccc;
+  font-family: Arial, sans-serif;
+  /* Set font family */
+  font-size: 14px;
+  /* Adjust font size */
+}
+
+.nav1 .nav1-left,
+.nav1 .nav1-center,
+.nav1 .nav1-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav1 .nav1-center {
+  flex: 1;
+  justify-content: center;
+}
+
+.nav1 .nav1-center h1 {
+  margin: 0;
+  font-size: 20px;
+  /* Adjusted to match the image */
+  font-weight: bold;
+  color: white;
+}
+
+.nav1 .icon {
+  margin-right: 15px;
+  /* Space between icons */
+  color: #ccc;
+  font-size: 18px;
+  /* Adjust icon size */
+}
+
+.nav1 .language-select {
+  background-color: transparent;
+  border: none;
+  color: #ccc;
+  font-size: 14px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.nav1 .language-select option {
+  background-color: #2d5541;
+  /* Matches the navbar background */
+  color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .nav1 .nav1-center h1 {
+    font-size: 16px;
+  }
+  .web-title {
+    font-family: 'Newsreader', serif;
+    margin-left: 100px;
+    font-size: 12px;
+  }
+
+  .nav1 .icon,
+  .language-select {
+    font-size: 12px;
+    margin-right: 8px;
+  }
+}
+
+
+/* Nav2.css */
+
+.nav2 {
+  margin-top:70px;
+  background-color: #2d5541;
+  transition: transform 0.3s ease-in-out;
+  /* Dark green background color to match Nav1 */
+  padding: 10px 0;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.nav2 .nav2-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  /* Adjust spacing between links */
+}
+
+.nav2 .nav2-links li {
+  display: inline;
+}
+
+.nav2 .nav2-links a {
+  color: #ccc;
+  font-size: 16px;
+  /* Adjust font size to match the image */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav2 .nav2-links a:hover {
+  color: white;
+  /* Light gray color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .nav2 .nav2-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav2 .nav2-links a {
+    font-size: 14px;
+    /* Slightly smaller font size on small screens */
+  }
+}
+
+.nav2.visible {
+  display: block;
+
+  /* transform: translateY(0); */
+  /* Visible position */
+}
+
+.nav2.hidden {
+  display: none;
+  /* transform: translateY(-100%); */
+  /* Hide above the viewport */
+}
+
+
+/* Main */
+
+
+/* Main */
+.Main .video-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Make video fill the container */
+.Main .video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures video covers the entire area without distortion */
+}
+
+/* Centered text styling */
+.Main .centered-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
+}
+
+/* Position and style the controls */
+.Main .video-controls {
+  position: absolute;
+  bottom: 25px; /* Distance from the bottom */
+  left: 50px; /* Distance from the left */
+  display: flex;
+  gap: 10px; /* Space between buttons */
+}
+
+/* GIF container */
+.Main .gif-container {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+/* Common button style */
+.Main .control-btn {
+  background-color: black; /* Black background */
+  color: white; /* White icons */
+  font-size: 15px; /* Icon size */
+  padding: 10px; /* Adjust the size of the button */
+  border-radius: 50%; /* Circle the button */
+  border: none; /* Remove border */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth background change */
+}
+
+/* Button hover effect */
+.Main .control-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Darken on hover */
+}
+
+/* Icon inside the button */
+.Main .control-btn i {
+  font-size: 12px; /* Adjust icon size */
+}
+
+/* GIF styling */
+.Main .gif-container .gif {
+  width: 100px; /* Fixed GIF width */
+  height: 100px; /* Fixed GIF height */
+  object-fit: cover; /* Ensures GIF is contained properly */
+}
+
+
+
+
+
+/* Footer */
+.footer-form
+{
+  width: 80%;
+}
+
+.form-title {
+  font-size: 12px;
+  font: weight 500px;
+  font-family: "Oswald", sans-serif;
+  color:white;
+  margin-bottom: 16px;
+  margin-top: 30px;
   text-transform: uppercase;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.form-subtitle {
+  font-size: 12px;
+  color:#ccc;
+  margin-bottom: 50px;
 }
+
+.footer-form .form-control {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 15px;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  background-color: transparent;
+  color: white; /* Default input text color */
+}
+
+/* Placeholder color */
+.footer-form .form-control::placeholder {
+  color: #ccc !important;
+  opacity: 1; /* Full opacity for placeholder text */
+}
+
+/* On focus (when clicked) */
+.footer-form .form-control:focus {
+  background-color: transparent;
+  color: #ccc; /* Text color when input is focused */
+  border-bottom: 1px solid white;
+
+}
+
+.service-text {
+  font-size: 12px;
+  color:#ccc;
+  margin-bottom: 2px;
+}
+.footer-social-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.footer-icon {
+  background-color: #3B82F6; /* Icon background color */
+  color: white;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  font-size: 12.5px;
+  border: 1px solid white; /* White border around each icon */
+  transition: background-color 0.3s; /* Optional: adds hover effect */
+}
+
+.footer-icon i {
+  margin: 0;
+}
+
+
+@media (max-width: 786px) {
+  .footer-social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+  }
+  
+}
+
+@media (max-width: 576px) {
+  .footer-social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+  }
+  
+}
+.Footer
+{
+  position: absolute;
+}
+.dog-Image{
+  position: relative;
+  left: 30%;
+  top: 20%;
+}
+
+.button
+{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+}
+
+
+
+/*Explore the world*/
+/* For small screens (max-width: 576px) */
+@media (max-width: 576px) {
+  .container-bag .col-lg-4, .container-bag .col-lg-6 {
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .container-bag img {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 10px;
+  }
+
+  .container-bag .d-flex {
+      justify-content: center;
+      width: 100%;
+  }
+  
+.video-gif{
+  margin-top: 40px;
+}
+  .button
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  /* Centering the button below the image */
+  .container-bag .d-flex.align-items-start {
+      align-items: center;
+  }
+}
+
+/* For medium screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .container-bag .col-lg-4, .container-bag .col-lg-6 {
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .container-bag img {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 10px;
+  }
+  
+.video-gif{
+  margin-top: 40px;
+}
+
+  .button
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+
+  .container-bag .d-flex {
+      justify-content: center;
+      width: 100%;
+  }
+
+  /* Centering the button below the image */
+  .container-bag .d-flex.align-items-start {
+      align-items: center;
+  }
+}
+.container-bag {
+  position: relative; /* Make the container-bag the reference for absolute positioning */
+}
+
+.white-dog {
+  position: absolute;
+  left: 10px;
+  bottom: 0%;
+  max-width: 100%;
+  width: 123px;
+  height: 90px;
+  margin-left: 10px;
+}
+
+
+.video-gif{
+  margin-top: 40px;
+}
+
+
+
+

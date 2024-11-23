@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './cartSummary.css'; // Make sure to create this CSS file for custom styles
+import './cartSummary.css'; 
 
 const CartSummary = ({ cart, totalBill }) => {
     console.log('Props:', { cart, totalBill });
@@ -42,9 +42,11 @@ const CartSummary = ({ cart, totalBill }) => {
                             Continue Shopping
                         </Link>
                     </div>
+                    <div></div>
                 </>
             )}
         </div>
+
     );
 };
 

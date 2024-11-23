@@ -1,0 +1,86 @@
+.gazette-container {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .gazette-title {
+    font-size: 35px;
+    font-family: "Serif", sans-serif;
+    color: #1a3a6e;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+  
+  .gazette-subtitle {
+    font-size: 1rem;
+    color: #5a5a5a;
+    margin-bottom: 30px;
+  }
+  
+  .email-input {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 15px;
+    border: none;
+    border-bottom: 1px solid #0d3c26;
+    outline: none;
+    background-color: transparent;
+  }
+  
+  .email-input:focus {
+    box-shadow: none;
+    border-color: #0d3c26;
+  }
+  
+  .submit-btn {
+    color: #0d3c26;
+    font-weight: bold;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+  }
+  
+  .submit-btn:hover {
+    color: #ff9000;
+    text-decoration: none;
+  }
+  
+  .illustration {
+    max-width: 300px;
+    margin-top: 30px;
+  }
+
+  .gazette-subtitle{
+    width: 99%;
+    margin: .7rem auto;
+    font-family: 'Newsreader', serif;
+    font-size: 24px;
+    letter-spacing: -0.054rem;
+    line-height: 30px;
+    font-weight: 300;
+  }
+  
+  .gazette-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .gazette-form{
+    width: 100%;
+  }
+
+  .submit-btn{
+        background: transparent none;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: .8rem;
+        line-height: 1.25rem;
+        text-transform: uppercase;
+        border: 0;
+        border-bottom: 1px solid #e8b14d;
+        border-radius: 0;
+        color: #183f26;
+        letter-spacing: .082rem;
+        padding: 0 0 .188rem;
+  }

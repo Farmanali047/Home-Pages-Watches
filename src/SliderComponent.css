@@ -1,0 +1,117 @@
+* {
+    outline: none;
+    box-sizing: border-box;
+}
+
+.slider-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(to bottom right, #3B82F6,#112749); /* Green background color */
+}
+
+.slider {
+    width: 50vw; /* Adjusted width to center better */
+    position: relative;
+    margin: 0 20px;
+}
+
+.slick-track {
+    display: flex;
+}
+
+.slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 80px;
+}
+
+.slick-slide img {
+    width: 100%;
+    max-width: 540px;
+    max-height: 400px;
+    object-fit: cover;
+    border: 10px solid #ffffff; /* 10px white border */
+    box-sizing: border-box; /* Ensures border is within the element’s total width */
+}
+
+/* Center image (no border-radius and padding added) */
+.slick-slide.slick-center img {
+    transform: scale(1);
+}
+
+/* Previous and Next images (display less than 30%) */
+.slick-slide.slick-prev img, .slick-slide.slick-next img {
+    opacity: 0.3;
+    transform:none; /* Reduce the size of previous/next images to less than 30% */
+}
+
+/* Slick navigation buttons (Arrows) */
+.slick-prev, .slick-next {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    border: none;
+    text-align: center;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.slick-prev {
+    left: 10px;
+}
+
+.slick-next {
+    right: 10px;
+}
+
+.slick-prev:hover, .slick-next:hover {
+    opacity: 1;
+}
+
+.slick-prev {
+    background-image: url('data:image/svg+xml;base64,...');
+}
+
+.slick-next {
+    background-image: url('data:image/svg+xml;base64,...');
+}
+
+/* Slick Slide Transition */
+.slick-list {
+    overflow: visible;
+}
+
+/* Text Styling for each image */
+.slider-item {
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Allow text below the image */
+    align-items: center;
+    width: auto; /* Allow the image size to vary */
+}
+
+.image-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    padding-top: 15px; /* Space between image and text */
+    text-align: center;
+}
+
+/* Make the images responsive */
+@media (max-width: 768px) {
+    .slider {
+        width: 90vw;
+    }
+
+    .slick-slide img {
+        max-width: 100%;
+        width: auto;
+    }
+}
